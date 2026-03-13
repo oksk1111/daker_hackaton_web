@@ -40,22 +40,22 @@ export default function HackathonsPage() {
     <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">🚀 해커톤</h1>
-        <p className="text-gray-500">진행중이거나 예정된 해커톤을 확인하세요.</p>
+        <h1 className="text-3xl font-bold text-neutral-900 mb-2">Hackathons</h1>
+        <p className="text-neutral-500">Browse ongoing and upcoming hackathons.</p>
       </div>
 
       {/* Filters */}
       <div className="flex flex-wrap gap-4 mb-8">
         {/* Status Filter */}
-        <div className="flex gap-1 bg-white border border-gray-200 rounded-xl p-1">
+        <div className="flex gap-1 bg-white border border-neutral-200 rounded-xl p-1">
           {STATUS_OPTIONS.map((opt) => (
             <button
               key={opt.value}
               onClick={() => setStatusFilter(opt.value)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 statusFilter === opt.value
-                  ? 'bg-purple-600 text-white'
-                  : 'text-gray-600 hover:bg-gray-100'
+                  ? 'bg-[#7C3AED] text-white'
+                  : 'text-neutral-600 hover:bg-neutral-100'
               }`}
             >
               {opt.label}
@@ -67,7 +67,7 @@ export default function HackathonsPage() {
         <select
           value={tagFilter}
           onChange={(e) => setTagFilter(e.target.value)}
-          className="px-4 py-2 bg-white border border-gray-200 rounded-xl text-sm text-gray-700 focus:ring-2 focus:ring-purple-500"
+          className="px-4 py-2 bg-white border border-neutral-200 rounded-xl text-sm text-neutral-700 focus:ring-2 focus:ring-[#7C3AED]"
         >
           <option value="all">모든 태그</option>
           {tags.map((tag) => (

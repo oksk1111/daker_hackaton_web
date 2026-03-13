@@ -27,6 +27,6 @@ describe('Navbar', () => {
   test('active link has correct styling', () => {
     render(<Navbar />);
     const homeLink = screen.getByText('메인');
-    expect(homeLink.className).toContain('bg-purple-50');
+    expect(homeLink.className).toContain('bg-[#f3f0ff]');
   });
 });

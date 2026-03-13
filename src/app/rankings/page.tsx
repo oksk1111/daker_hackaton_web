@@ -32,20 +32,20 @@ export default function RankingsPage() {
     <div className="max-w-4xl mx-auto px-4 py-8">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">📊 랭킹</h1>
-        <p className="text-gray-500">해커톤 참여와 성과에 따른 포인트 순위입니다.</p>
+        <h1 className="text-3xl font-bold text-neutral-900 mb-2">Rankings</h1>
+        <p className="text-neutral-500">해커톤 참여와 성과에 따른 포인트 순위입니다.</p>
       </div>
 
       {/* Period Filter */}
-      <div className="flex gap-1 bg-white border border-gray-200 rounded-xl p-1 mb-8 w-fit">
+      <div className="flex gap-1 bg-white border border-neutral-200 rounded-xl p-1 mb-8 w-fit">
         {PERIOD_OPTIONS.map((opt) => (
           <button
             key={opt.value}
             onClick={() => setPeriod(opt.value)}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               period === opt.value
-                ? 'bg-purple-600 text-white'
-                : 'text-gray-600 hover:bg-gray-100'
+                ? 'bg-[#7C3AED] text-white'
+                : 'text-neutral-600 hover:bg-neutral-100'
             }`}
           >
             {opt.label}

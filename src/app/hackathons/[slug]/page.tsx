@@ -14,13 +14,13 @@ import { getHackathonDetail } from '@/lib/store/hackathonStore';
 import type { HackathonDetail } from '@/lib/types';
 
 const SECTION_TABS = [
-  { id: 'overview', label: '개요', icon: '📋' },
-  { id: 'eval', label: '평가', icon: '📊' },
-  { id: 'schedule', label: '일정', icon: '📅' },
-  { id: 'prize', label: '상금', icon: '💰' },
-  { id: 'teams', label: '팀', icon: '👥' },
-  { id: 'submit', label: '제출', icon: '📤' },
-  { id: 'leaderboard', label: '리더보드', icon: '🏆' },
+  { id: 'overview', label: '개요' },
+  { id: 'eval', label: '평가' },
+  { id: 'schedule', label: '일정' },
+  { id: 'prize', label: '상금' },
+  { id: 'teams', label: '팀' },
+  { id: 'submit', label: '제출' },
+  { id: 'leaderboard', label: '리더보드' },
 ];
 
 export default function HackathonDetailPage() {
@@ -59,11 +59,11 @@ export default function HackathonDetailPage() {
           <>
             {/* Title */}
             <div className="mb-8">
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">{detail.title}</h1>
+              <h1 className="text-3xl font-bold text-neutral-900 mb-2">{detail.title}</h1>
             </div>
 
             {/* Section Tabs */}
-            <div className="sticky top-16 z-40 bg-gray-50 -mx-4 px-4 py-3 mb-8 border-b border-gray-200">
+            <div className="sticky top-16 z-40 bg-white -mx-4 px-4 py-3 mb-8 border-b border-neutral-200">
               <div className="flex gap-1 overflow-x-auto">
                 {SECTION_TABS.map((tab) => (
                   <button
@@ -71,11 +71,10 @@ export default function HackathonDetailPage() {
                     onClick={() => scrollToSection(tab.id)}
                     className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors ${
                       activeTab === tab.id
-                        ? 'bg-purple-600 text-white'
-                        : 'text-gray-600 hover:bg-white hover:text-purple-600'
+                        ? 'bg-[#7C3AED] text-white'
+                        : 'text-neutral-600 hover:bg-neutral-100 hover:text-[#7C3AED]'
                     }`}
                   >
-                    <span>{tab.icon}</span>
                     {tab.label}
                   </button>
                 ))}

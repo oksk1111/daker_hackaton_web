@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#FAFAFA"/>
+  <!-- Central hub -->
+  <rect x="320" y="220" width="160" height="160" rx="20" fill="#7C3AED" opacity="0.1"/>
+  <rect x="340" y="240" width="120" height="120" rx="15" fill="#7C3AED" opacity="0.2"/>
+  <circle cx="400" cy="300" r="35" fill="#7C3AED" opacity="0.3"/>
+  <path d="M385 300 L400 285 L415 300 L400 315 Z" fill="#7C3AED"/>
+  
+  <!-- Dev & Engineers (top-left) -->
+  <circle cx="180" cy="200" r="50" fill="#7C3AED" opacity="0.05" stroke="#7C3AED" stroke-width="2" stroke-dasharray="5,5"/>
+  <circle cx="170" cy="195" r="12" fill="#6D28D9"/>
+  <rect x="158" y="210" width="24" height="30" rx="5" fill="#6D28D9"/>
+  <circle cx="195" cy="195" r="12" fill="#9370FF"/>
+  <rect x="183" y="210" width="24" height="30" rx="5" fill="#9370FF"/>
+  <text x="180" y="270" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#7C3AED" font-style="italic">Dev &amp; Engineers</text>
+  
+  <!-- IT & Operations (bottom-left) -->
+  <circle cx="150" cy="430" r="50" fill="#06B6D4" opacity="0.05" stroke="#06B6D4" stroke-width="2" stroke-dasharray="5,5"/>
+  <circle cx="140" cy="425" r="12" fill="#0891B2"/>
+  <rect x="128" y="440" width="24" height="30" rx="5" fill="#0891B2"/>
+  <rect x="155" y="410" width="40" height="30" rx="5" fill="#E0F2FE" stroke="#06B6D4"/>
+  <text x="150" y="500" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#06B6D4" font-style="italic">IT &amp; Operations</text>
+
+  <!-- Teams (top-right) -->
+  <circle cx="620" cy="180" r="50" fill="#EC4899" opacity="0.05" stroke="#EC4899" stroke-width="2" stroke-dasharray="5,5"/>
+  <circle cx="610" cy="175" r="12" fill="#DB2777"/>
+  <rect x="598" y="190" width="24" height="30" rx="5" fill="#DB2777"/>
+  <circle cx="635" cy="175" r="12" fill="#F472B6"/>
+  <rect x="623" y="190" width="24" height="30" rx="5" fill="#F472B6"/>
+  <text x="620" y="250" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#EC4899" font-style="italic">Teams</text>
+
+  <!-- Rankings (bottom-right) -->
+  <circle cx="650" cy="420" r="50" fill="#F97316" opacity="0.05" stroke="#F97316" stroke-width="2" stroke-dasharray="5,5"/>
+  <rect x="625" y="400" width="50" height="40" rx="5" fill="#FFF7ED" stroke="#F97316"/>
+  <rect x="630" y="420" width="10" height="15" fill="#F97316"/>
+  <rect x="643" y="413" width="10" height="22" fill="#FB923C"/>
+  <rect x="656" y="408" width="10" height="27" fill="#FDBA74"/>
+  <text x="650" y="470" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#F97316" font-style="italic">Rankings</text>
+
+  <!-- Customer Support (bottom-center) -->
+  <circle cx="400" cy="500" r="50" fill="#22C55E" opacity="0.05" stroke="#22C55E" stroke-width="2" stroke-dasharray="5,5"/>
+  <circle cx="390" cy="490" r="12" fill="#16A34A"/>
+  <rect x="378" y="505" width="24" height="30" rx="5" fill="#16A34A"/>
+  <rect x="410" y="480" width="35" height="25" rx="5" fill="#DCFCE7" stroke="#22C55E"/>
+  <text x="400" y="565" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#22C55E" font-style="italic">Community</text>
+
+  <!-- Connecting lines -->
+  <line x1="230" y1="220" x2="320" y2="260" stroke="#7C3AED" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.3"/>
+  <line x1="200" y1="400" x2="320" y2="340" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.3"/>
+  <line x1="570" y1="200" x2="480" y2="260" stroke="#EC4899" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.3"/>
+  <line x1="600" y1="400" x2="480" y2="340" stroke="#F97316" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.3"/>
+  <line x1="400" y1="450" x2="400" y2="380" stroke="#22C55E" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.3"/>
+</svg>

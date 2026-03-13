@@ -30,59 +30,60 @@ export default function LeaderboardSection({ leaderboard, hackathonSlug }: Props
     setNoSubmissionTeams([...new Set(noSub)]);
   }, [hackathonSlug]);
 
-  const rankEmoji = (rank: number) => {
-    if (rank === 1) return '🥇';
-    if (rank === 2) return '🥈';
-    if (rank === 3) return '🥉';
+  const rankLabel = (rank: number) => {
     return `${rank}`;
   };
 
   return (
     <section id="leaderboard" className="space-y-4">
-      <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
-        <span className="text-purple-500">🏆</span> 리더보드
-      </h2>
+      <h2 className="section-title">리더보드</h2>
 
       {leaderboard.note && (
-        <p className="text-sm text-gray-500 bg-gray-50 p-3 rounded-lg">{leaderboard.note}</p>
+        <p className="text-sm text-neutral-500 bg-neutral-50 p-3 rounded-lg">{leaderboard.note}</p>
       )}
 
       {entries.length === 0 ? (
-        <div className="text-center py-8 text-gray-400">
+        <div className="text-center py-8 text-neutral-400">
           아직 리더보드 데이터가 없습니다.
         </div>
       ) : (
-        <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+        <div className="bg-white border border-neutral-200 rounded-xl overflow-hidden">
           <table className="w-full">
-            <thead className="bg-gray-50">
+            <thead className="bg-neutral-50">
               <tr>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase">순위</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase">팀</th>
-                <th className="px-4 py-3 text-right text-xs font-semibold text-gray-500 uppercase">점수</th>
-                <th className="px-4 py-3 text-right text-xs font-semibold text-gray-500 uppercase">제출 시간</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-neutral-500 uppercase">순위</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-neutral-500 uppercase">팀</th>
+                <th className="px-4 py-3 text-right text-xs font-semibold text-neutral-500 uppercase">점수</th>
+                <th className="px-4 py-3 text-right text-xs font-semibold text-neutral-500 uppercase">제출 시간</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-100">
+            <tbody className="divide-y divide-neutral-100">
               {entries.map((entry) => (
-                <tr key={entry.rank} className="hover:bg-gray-50 transition-colors">
-                  <td className="px-4 py-3 text-lg">{rankEmoji(entry.rank)}</td>
+                <tr key={entry.rank} className="hover:bg-neutral-50 transition-colors">
                   <td className="px-4 py-3">
-                    <span className="font-semibold text-gray-800">{entry.teamName}</span>
+                    <span className={`inline-flex items-center justify-center w-7 h-7 rounded-full text-sm font-bold ${
+                      entry.rank <= 3 ? 'bg-[#f3f0ff] text-[#7C3AED]' : 'text-neutral-600'
+                    }`}>
+                      {rankLabel(entry.rank)}
+                    </span>
+                  </td>
+                  <td className="px-4 py-3">
+                    <span className="font-semibold text-neutral-800">{entry.teamName}</span>
                     {entry.artifacts?.webUrl && (
                       <a
                         href={entry.artifacts.webUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="ml-2 text-xs text-purple-500 hover:underline"
+                        className="ml-2 text-xs text-[#7C3AED] hover:underline"
                       >
-                        🔗 웹
+                        View
                       </a>
                     )}
                   </td>
-                  <td className="px-4 py-3 text-right font-mono font-bold text-purple-600">
+                  <td className="px-4 py-3 text-right font-mono font-bold text-[#7C3AED]">
                     {entry.score}
                   </td>
-                  <td className="px-4 py-3 text-right text-xs text-gray-500">
+                  <td className="px-4 py-3 text-right text-xs text-neutral-500">
                     {formatDate(entry.submittedAt)}
                   </td>
                 </tr>
@@ -94,7 +95,7 @@ export default function LeaderboardSection({ leaderboard, hackathonSlug }: Props
 
       {/* 미제출 표기 */}
       {noSubmissionTeams.length > 0 && (
-        <div className="text-sm text-gray-400">
+        <div className="text-sm text-neutral-400">
           <p>미제출 팀: {noSubmissionTeams.join(', ')}</p>
         </div>
       )}

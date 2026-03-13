@@ -60,6 +60,6 @@ describe('TeamCard', () => {
 
   test('renders member count', () => {
     render(<TeamCard team={mockTeamOpen} />);
-    expect(screen.getByText('👥 3명')).toBeInTheDocument();
+    expect(screen.getByText('3명')).toBeInTheDocument();
   });
 });

@@ -10,10 +10,10 @@ export default function HackathonCard({ hackathon }: HackathonCardProps) {
   return (
     <Link
       href={`/hackathons/${hackathon.slug}`}
-      className="block bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-200 hover:-translate-y-1"
+      className="card block bg-white rounded-xl border border-neutral-200 overflow-hidden"
     >
       {/* Thumbnail */}
-      <div className="h-44 bg-gradient-to-br from-purple-100 to-blue-100 relative overflow-hidden">
+      <div className="h-44 bg-gradient-to-br from-[#f3f0ff] to-blue-50 relative overflow-hidden">
         <img
           src={hackathon.thumbnailUrl}
           alt={hackathon.title}
@@ -33,7 +33,7 @@ export default function HackathonCard({ hackathon }: HackathonCardProps) {
 
       {/* Body */}
       <div className="p-5">
-        <h3 className="text-lg font-bold text-gray-800 mb-2 line-clamp-2">
+        <h3 className="text-lg font-bold text-neutral-800 mb-2 line-clamp-2">
           {hackathon.title}
         </h3>
 
@@ -42,7 +42,7 @@ export default function HackathonCard({ hackathon }: HackathonCardProps) {
           {hackathon.tags.map((tag) => (
             <span
               key={tag}
-              className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs"
+              className="px-2 py-0.5 bg-neutral-100 text-neutral-600 rounded-full text-xs"
             >
               {tag}
             </span>
@@ -50,7 +50,7 @@ export default function HackathonCard({ hackathon }: HackathonCardProps) {
         </div>
 
         {/* Period */}
-        <div className="text-xs text-gray-500">
+        <div className="text-xs text-neutral-500">
           <span>{formatDateShort(hackathon.period.submissionDeadlineAt)}</span>
           <span className="mx-1">~</span>
           <span>{formatDateShort(hackathon.period.endAt)}</span>

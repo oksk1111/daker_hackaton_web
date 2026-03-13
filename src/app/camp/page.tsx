@@ -38,16 +38,16 @@ function CampContent() {
     <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">👥 팀원 모집</h1>
-        <p className="text-gray-500">
+        <h1 className="text-3xl font-bold text-neutral-900 mb-2">Team Recruitment</h1>
+        <p className="text-neutral-500">
           {hackathonFilter
-            ? '이 해커톤의 팀 모집글을 확인하세요.'
-            : '함께할 팀원을 찾거나 팀을 만들어보세요.'}
+            ? 'Browse team posts for this hackathon.'
+            : 'Find teammates or create your own team.'}
         </p>
         {hackathonFilter && (
-          <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 bg-purple-50 text-purple-700 rounded-lg text-sm">
-            <span>🏷️ 필터: {hackathonFilter}</span>
-            <a href="/camp" className="text-purple-500 hover:underline text-xs">✕ 필터 해제</a>
+          <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 bg-[#f3f0ff] text-[#6D28D9] rounded-full text-sm">
+            <span>Filter: {hackathonFilter}</span>
+            <a href="/camp" className="text-[#7C3AED] hover:underline text-xs ml-1">Clear</a>
           </div>
         )}
       </div>
@@ -77,7 +77,7 @@ export default function CampPage() {
   return (
     <Suspense fallback={
       <div className="flex items-center justify-center py-20">
-        <div className="w-10 h-10 border-4 border-purple-200 border-t-purple-600 rounded-full animate-spin" />
+        <div className="w-10 h-10 border-4 border-[#f3f0ff] border-t-[#7C3AED] rounded-full animate-spin" />
       </div>
     }>
       <CampContent />
